@@ -107,9 +107,9 @@ int main()
     Node *tail = NULL;
 
     insertNode(tail, -1, 12);
-    // insertNode(tail, 12, 45);
-    // insertNode(tail, 45, 88);
-    // insertNode(tail, 88, 92);
+    insertNode(tail, 12, 45);
+    insertNode(tail, 45, 88);
+    insertNode(tail, 88, 92);
 
     print_list(tail);
     deleteNode(tail, 12);
