@@ -1,26 +1,24 @@
 #include <iostream>
 using namespace std;
 
-int factorial(int n) { // O(n)
-    if (n == 0) 
+int factorial(int n)
+{
+    // Base Case
+    if (n == 0)
+    {
         return 1;
-    
-    return factorial(n - 1) * n;
-}
+    }
 
-// doing iteratively
-// int factorial(int n) {
-//     int result = 1;
-//     for (int i = 1; i <= n; i++) {
-//         result = result * i;
-//     }
-//     return result;
-// }
+    // Recursive Case
+    return n * factorial(n - 1);
+}
 
 int main()
 {
-    int result = factorial(6);
-    cout << result << endl;
+    int n;
+    cin >> n;
 
-    return 0;
+    int ans = factorial(n);
+
+    cout << "factorial of " << n << " is: " << ans << endl;
 }
