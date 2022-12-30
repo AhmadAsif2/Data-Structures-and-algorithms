@@ -1,14 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int power(int n)
+int fibonacci(int n)
 {
     if (n == 0)
+    {
+        return 0;
+    }
+
+    if (n == 1)
     {
         return 1;
     }
 
-    return 2 * power(n - 1);
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 int main()
@@ -16,6 +21,6 @@ int main()
     int n;
     cin >> n;
 
-    int ans = power(n);
+    int ans = fibonacci(n);
     cout << ans << endl;
 }
